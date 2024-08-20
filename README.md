@@ -1,7 +1,7 @@
 # Projeto Web - Site de Informações Esportivas
 
 ## Membros da Equipe
-- **** - Nome Completo
+- **Matheus Rocha De Araujo** - 202402409778
 - **Aluno 2** - Nome Completo
 - **Aluno 3** - Nome Completo
 
