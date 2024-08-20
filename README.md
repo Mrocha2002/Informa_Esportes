@@ -1,11 +1,12 @@
 # Projeto Web - Site de Informações Esportivas
 
-## Membros da Equipe
+## Membros 
 - **Matheus Rocha De Araujo** - 202402409778
 - **Lizandro Ariel Rojas Maldonado** - 202402410644
-- **Aluno 3** - Nome Completo
+- **Aluno 3** - RA do Aluno
+- **Aluno 4** - RA do Aluno
 
-# Descrição do Trabalho
+# Descrição
 Este projeto é um exemplo básico de um site informativo sobre esporte.
 
 ## Links
