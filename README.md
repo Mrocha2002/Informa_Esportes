@@ -2,7 +2,7 @@
 
 ## Membros da Equipe
 - **Matheus Rocha De Araujo** - 202402409778
-- **Aluno 2** - Nome Completo
+- **Lizandro Ariel Rojas Maldonado** - 202402410644
 - **Aluno 3** - Nome Completo
 
 # Descrição do Trabalho
