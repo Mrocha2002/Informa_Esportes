@@ -1,56 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo dos Esportes</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Esportes Informativos</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .news-form, .news-list, .results {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .news-form h2, .news-list h2, .results h2 {
+            margin-top: 0;
+        }
+        .news-item, .result-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .news-item:last-child, .result-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h3, .result-item h3 {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Mundo dos Esportes</h1>
+        <h1>Esportes Informativos</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#submit-news">Enviar Notícia</a></li>
+                <li><a href="#news">Notícias</a></li>
+                <li><a href="#results">Resultados</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
-        <section class="banner">
-            <img src="banner.jpg" alt="Esportes em Destaque">
-            <h2>Explore o Mundo dos Esportes</h2>
+    <div class="container">
+        <section id="home">
+            <h2>Bem-vindo ao Esportes Informativos!</h2>
+            <p>Fique por dentro das últimas notícias e resultados dos principais esportes.</p>
         </section>
-
-        <section class="destaques">
-            <h2>Esportes em Destaque</h2>
-            <ul>
-                <li><a href="#">Futebol</a></li>
-                <li><a href="#">Basquete</a></li>
-                <li><a href="#">Natação</a></li>
-                <li><a href="#">Tênis</a></li>
-            </ul>
+        
+        <section id="submit-news" class="news-form">
+            <h2>Envie Sua Notícia</h2>
+            <form action="#" method="post">
+                <label for="news-title">Título da Notícia:</label>
+                <input type="text" id="news-title" name="news-title" required><br><br>
+                <label for="news-content">Conteúdo:</label><br>
+                <textarea id="news-content" name="news-content" rows="6" cols="50" required></textarea><br><br>
+                <input type="submit" value="Enviar Notícia">
+            </form>
         </section>
-
-        <section class="noticias">
-            <h2>Últimas Notícias</h2>
-            <p>Notícia 1: [Resumo da notícia]</p>
-            <p>Notícia 2: [Resumo da notícia]</p>
+        
+        <section id="news" class="news-list">
+            <h2>Notícias Recentes</h2>
+            <div class="news-item">
+                <h3>Notícia 1</h3>
+                <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="news-item">
+                <h3>Notícia 2</h3>
+                <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <!-- Mais notícias podem ser adicionadas aqui -->
         </section>
-
-        <section class="eventos">
-            <h2>Próximos Eventos</h2>
-            <ul>
-                <li>Evento 1: Data</li>
-                <li>Evento 2: Data</li>
-            </ul>
+        
+        <section id="results" class="results">
+            <h2>Resultados Recentes</h2>
+            <div class="result-item">
+                <h3>Resultado 1</h3>
+                <p>Detalhes do resultado... Time A vs Time B - Resultado final: Time A 2 x 1 Time B</p>
+            </div>
+            <div class="result-item">
+                <h3>Resultado 2</h3>
+                <p>Detalhes do resultado... Time C vs Time D - Resultado final: Time C 3 x 0 Time D</p>
+            </div>
+            <!-- Mais resultados podem ser adicionados aqui -->
         </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Mundo dos Esportes. Todos os direitos reservados.</p>
-    </footer>
+    </div>
 </body>
 </html>
