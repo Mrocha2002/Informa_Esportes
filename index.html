@@ -7,39 +7,51 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://example.com/camuflagem.jpg'); /* URL da imagem de fundo camuflado */
-            background-size: cover; /* Faz com que a imagem cubra toda a tela */
-            background-repeat: no-repeat; /* Impede que a imagem se repita */
+            background: linear-gradient(45deg, #2E8B57, #8FBC8F, #2E8B57); /* Gradiente de verde */
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite; /* Animação suave do gradiente */
             color: #000000;
             margin: 0;
             padding: 0;
             position: relative;
         }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         header {
-            background-color: rgba(255, 255, 255, 0.9); /* Tornando o cabeçalho um pouco transparente */
+            background-color: rgba(255, 255, 255, 1);
             color: #006400; /* Verde escuro para o texto do cabeçalho */
             padding: 20px;
             text-align: center;
         }
+
         h1 {
             font-size: 48px;
             margin: 0;
             color: #006400; /* Verde escuro para o título */
         }
+
         h2 {
             font-size: 24px;
             margin: 5px 0 20px 0;
             font-weight: normal;
             color: #006400; /* Verde escuro para o subtítulo */
         }
+
         nav ul {
             list-style-type: none;
             padding: 0;
         }
+
         nav ul li {
             display: inline;
             margin-right: 10px;
         }
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
@@ -48,19 +60,23 @@
             border-radius: 4px;
             background-color: #333;
         }
+
         nav ul li a:hover {
             background-color: #555;
         }
+
         .container {
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo da caixa de conteúdo com um pouco de transparência */
+            background-color: rgba(255, 255, 255, 0.8);
             max-width: 800px;
             margin: 0 auto; /* Centraliza o container */
             border-radius: 8px; /* Bordas arredondadas */
         }
+
         .news-list {
             margin-top: 20px;
         }
+
         .news-list .news-item {
             margin-bottom: 20px;
             padding: 10px;
@@ -68,21 +84,26 @@
             background-color: #f9f9f9;
             border-radius: 5px; /* Bordas arredondadas para as notícias */
         }
+
         .news-item h3 {
             margin: 0;
             color: #006400; /* Verde escuro para o título da notícia */
         }
+
         .news-item p {
             margin: 5px 0;
             color: #333; /* Preto */
         }
+
         form {
             margin-top: 30px;
         }
+
         form label {
             display: block;
             margin-bottom: 5px;
         }
+
         form input, form textarea {
             width: 100%;
             padding: 8px;
@@ -90,6 +111,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         form input[type="submit"] {
             background-color: #333;
             color: #fff;
@@ -97,12 +119,15 @@
             border: none;
             border: 2px solid #006400; /* Contorno verde escuro */
         }
+
         form input[type="submit"]:hover {
             background-color: #555;
         }
+
         .error {
             color: red;
         }
+
         footer {
             text-align: center;
             padding: 10px;
@@ -110,6 +135,7 @@
             color: #fff;
             margin-top: 20px;
         }
+
         .ball-image {
             position: absolute;
             top: 40px;
@@ -165,6 +191,7 @@
             <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
             <label for="mensagem">*Telefone:</label>
             <textarea id="mensagem" name="mensagem" placeholder="Digite seu telefone com DDD" required></textarea>
+
             <input type="hidden" name="_next" value="https://<Mrocha2002>.github.io/<Esportes_Informativos>/success.html">
             <input type="submit" value="Enviar">
             <p id="feedback" class="error"></p>
