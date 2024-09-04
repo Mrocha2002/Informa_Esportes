@@ -6,75 +6,102 @@
     <title>Esportes Informativos</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url(https://th.bing.com/th/id/R.f876e54e8908c77a2681122b4a34d88c?rik=xpE3wGyMDGv%2bpw&pid=ImgRaw&r=0);
-            background-size: cover;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-image: url(https://th.bing.com/th/id/R.f876e54e8908c77a2681122b4a34d88c?rik=xpE3wGyMDGv%2bpw&pid=ImgRaw&r=0);
+            color: #ffffff;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+            background: #ffffff;
+            color: #0D4828;
+            padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         nav ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
-            margin-right: 10px;
+            margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: #0D4828;
             text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #45a049;
         }
         .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .news-form, .news-list, .results {
+            background: #fff;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #333;
-        }
-        .news-list .news-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-        form {
-            margin-top: 30px;
+        .news-form h2, .news-list h2, .results h2 {
+            margin-top: 0;
+            color: #4CAF50;
         }
         form label {
             display: block;
-            margin-bottom: 5px;
+            margin: 10px 0 5px;
+            font-weight: bold;
         }
-        form input, form textarea {
-            width: 100%;
-            padding: 8px;
+        input[type="text"], textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background: #0D4828;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
             border-radius: 4px;
         }
-        form input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            cursor: pointer;
-            border: none;
+        input[type="submit"]:hover {
+            background: #45a049;
         }
-        form input[type="submit"]:hover {
-            background-color: #555;
+        .news-item, .result-item {
+            border-bottom: 1px solid #0D4828;
+            padding: 15px 0;
         }
-        .error {
-            color: red;
+        .news-item:last-child, .result-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h3, .result-item h3 {
+            margin: 0 0 10px;
+            color: #0D4828;
+        }
+        .news-item p, .result-item p {
+            margin: 0;
         }
         footer {
+            background: #333;
+            color: #fff;
             text-align: center;
             padding: 10px;
-            background-color: #333;
-            color: #fff;
-            margin-top: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -84,6 +111,7 @@
         <nav>
             <ul>
                 <li><a href="#submit-news">Principais notícias</a></li>
+            
             </ul>
         </nav>
     </header>
@@ -91,57 +119,121 @@
     <div class="container">
         <section id="home">
             <h2>Bem-vindo ao Esportes Informativos!</h2>
-            <p>Fique por dentro das últimas notícias.</p>
+            <p>Fique por dentro das últimas notícias e resultados dos principais jogos.</p>
         </section>
+        
         
         <section id="news" class="news-list">
             <h2>Notícias Recentes</h2>
             <div class="news-item">
-                <p>À CNN, Vini Jr. revela que Real Madrid cogita deixar campo em caso de racismo. Astro brasileiro defende que, se a Espanha não evoluir sobre o tema, o país deva deixar de ser sede da Copa do Mundo de 2030.</p>
+                <a href="#https://ge.globo.com/futebol/times/corinthians/noticia/2024/08/27/corinthians-anuncia-a-contratacao-do-centroavante-hector-hernandez.ghtml">Corinthians anuncia a contratação de Héctor Hernández</a>
+                <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="news-item">
-                <p>Alternativa econômica ao VAR, “desafio” é testado na Copa do Mundo Feminina Sub-20. Na vitória do Brasil contra a França, as duas equipes utilizaram o desafio.</p>
+                <h3>Escrever algo aqui</h3>
+                <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="news-item">
-                <p>Ex-Barcelona e titular na Euro: quem é Memphis Depay, alvo do Corinthians. Atacante de 30 anos está sem contrato desde a sua saída do Atlético de Madrid.</p>
-            </div>
-            <div class="news-item">
-                <p>Jovem que estava na Roma assina contrato com o Corinthians; veja detalhes. Pedro Lopes chega inicialmente para a categoria Sub-20 do Corinthians.</p>
-            </div>
+            
         </section>
         
+        <section id="results" class="results">
+            <h2>Resultados Recentes</h2>
+            <div class="result-item">
+                <h3>Resultado 1</h3>
+                <p>Detalhes do resultado... Time A vs Time B - Resultado final: Time A 2 x 1 Time B</p>
+            </div>
+            <div class="result-item">
+                <h3>Resultado 2</h3>
+                <p>Detalhes do resultado... Time C vs Time D - Resultado final: Time C 3 x 0 Time D</p>
+            </div>
+            
+        </section>
+    </div>
+    
+    <footer>
+        &copy; 2024 Esportes Informativos
+    </footer>
+
+      
+    <form>
         <form id="meuFormulario" action="processar.php" method="post">
-            <h1>Deseja receber nossas notícias em primeira mão?</h1>
-            <p>Faça seu cadastro!</p>
+            <div class="centralizar">
+                <h1>Deseja receber nossas notícias em primeira mão?</h1>
+                <p>Faça seu cadastro!</p>
+            </div>
+    
             <label for="nome">*Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+            
             <label for="email">*Email:</label>
             <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            
             <label for="mensagem">*Telefone:</label>
             <textarea id="mensagem" name="mensagem" placeholder="Digite seu telefone com DDD" required></textarea>
+            
             <input type="submit" value="Enviar">
             <p id="feedback" class="error"></p>
         </form>
-
+    
         <script>
             document.getElementById('meuFormulario').addEventListener('submit', function(event) {
                 var nome = document.getElementById('nome').value.trim();
                 var email = document.getElementById('email').value.trim();
                 var telefone = document.getElementById('mensagem').value.trim();
                 var feedback = document.getElementById('feedback');
-
+    
                 if (!nome || !email || !telefone) {
                     feedback.textContent = "Todos os campos são obrigatórios.";
-                    event.preventDefault(); 
+                   
                 } else {
                     feedback.textContent = "";
                 }
             });
         </script>
-    </div>
-    
-    <footer>
-        &copy; 2024 Esportes Informativos
-    </footer>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        form {
+            width: 50%; 
+            max-width: 600px; 
+            margin: 0 auto;
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+        }
+        
+        input, textarea {
+            display: block;
+            width: 100%; 
+            margin-bottom: 10px; 
+            padding: 10px; 
+            border: 1px solid #ccc;
+            border-radius: 4px; 
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+            var nome = document.getElementById('nome').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var telefone = document.getElementById('mensagem').value.trim();
+            var feedback = document.getElementById('feedback');
+
+            if (!nome || !email || !telefone) {
+                feedback.textContent = "Todos os campos são obrigatórios.";
+                event.preventDefault(); 
+            } else {
+                feedback.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
+
 </body>
 </html>
