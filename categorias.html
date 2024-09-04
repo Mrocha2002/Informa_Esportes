@@ -60,7 +60,7 @@
             margin: 10px 0 5px;
             font-weight: bold;
         }
-        input[type="text"], textarea {
+        input[type="text"], input[type="tel"], input[type="email"], textarea {
             width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 10px;
@@ -99,9 +99,8 @@
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
+            position: relative;
             width: 100%;
-            bottom: 0;
         }
     </style>
 </head>
@@ -111,7 +110,6 @@
         <nav>
             <ul>
                 <li><a href="#submit-news">Principais notícias</a></li>
-            
             </ul>
         </nav>
     </header>
@@ -122,18 +120,16 @@
             <p>Fique por dentro das últimas notícias e resultados dos principais jogos.</p>
         </section>
         
-        
         <section id="news" class="news-list">
             <h2>Notícias Recentes</h2>
             <div class="news-item">
-                <a href="#https://ge.globo.com/futebol/times/corinthians/noticia/2024/08/27/corinthians-anuncia-a-contratacao-do-centroavante-hector-hernandez.ghtml">Corinthians anuncia a contratação de Héctor Hernández</a>
+                <a href="https://ge.globo.com/futebol/times/corinthians/noticia/2024/08/27/corinthians-anuncia-a-contratacao-do-centroavante-hector-hernandez.ghtml">Corinthians anuncia a contratação de Héctor Hernández</a>
                 <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="news-item">
                 <h3>Escrever algo aqui</h3>
                 <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            
         </section>
         
         <section id="results" class="results">
@@ -146,7 +142,27 @@
                 <h3>Resultado 2</h3>
                 <p>Detalhes do resultado... Time C vs Time D - Resultado final: Time C 3 x 0 Time D</p>
             </div>
-            
+        </section>
+        
+        <section id="subscribe">
+            <form id="meuFormulario" action="processar.php" method="post">
+                <div class="centralizar">
+                    <h1>Deseja receber nossas notícias em primeira mão?</h1>
+                    <p>Faça seu cadastro!</p>
+                </div>
+
+                <label for="nome">*Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+                
+                <label for="email">*Email:</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                
+                <label for="telefone">*Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone com DDD" required>
+                
+                <input type="submit" value="Enviar">
+                <p id="feedback" class="error"></p>
+            </form>
         </section>
     </div>
     
@@ -154,86 +170,20 @@
         &copy; 2024 Esportes Informativos
     </footer>
 
-      
-    <form>
-        <form id="meuFormulario" action="processar.php" method="post">
-            <div class="centralizar">
-                <h1>Deseja receber nossas notícias em primeira mão?</h1>
-                <p>Faça seu cadastro!</p>
-            </div>
-    
-            <label for="nome">*Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
-            
-            <label for="email">*Email:</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-            
-            <label for="mensagem">*Telefone:</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Digite seu telefone com DDD" required></textarea>
-            
-            <input type="submit" value="Enviar">
-            <p id="feedback" class="error"></p>
-        </form>
-    
-        <script>
-            document.getElementById('meuFormulario').addEventListener('submit', function(event) {
-                var nome = document.getElementById('nome').value.trim();
-                var email = document.getElementById('email').value.trim();
-                var telefone = document.getElementById('mensagem').value.trim();
-                var feedback = document.getElementById('feedback');
-    
-                if (!nome || !email || !telefone) {
-                    feedback.textContent = "Todos os campos são obrigatórios.";
-                   
-                } else {
-                    feedback.textContent = "";
-                }
-            });
-        </script>
-        <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <style>
-        form {
-            width: 50%; 
-            max-width: 600px; 
-            margin: 0 auto;
-            padding: 20px; 
-            border: 1px solid #ddd; 
-            border-radius: 8px; 
-        }
-        
-        input, textarea {
-            display: block;
-            width: 100%; 
-            margin-bottom: 10px; 
-            padding: 10px; 
-            border: 1px solid #ccc;
-            border-radius: 4px; 
-        }
-    </style>
-</head>
-<body>
     <script>
         document.getElementById('meuFormulario').addEventListener('submit', function(event) {
             var nome = document.getElementById('nome').value.trim();
             var email = document.getElementById('email').value.trim();
-            var telefone = document.getElementById('mensagem').value.trim();
+            var telefone = document.getElementById('telefone').value.trim();
             var feedback = document.getElementById('feedback');
 
             if (!nome || !email || !telefone) {
                 feedback.textContent = "Todos os campos são obrigatórios.";
-                event.preventDefault(); 
+                event.preventDefault();
             } else {
                 feedback.textContent = "";
             }
         });
     </script>
-</body>
-</html>
-
 </body>
 </html>
