@@ -10,12 +10,12 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-image: url(https://th.bing.com/th/id/R.f876e54e8908c77a2681122b4a34d88c?rik=xpE3wGyMDGv%2bpw&pid=ImgRaw&r=0);
+            color: #ffffff;
         }
         header {
-            background: #4CAF50;
-            color: #fff;
+            background: #ffffff;
+            color: #0D4828;
             padding: 15px 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -30,7 +30,7 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: #0D4828;
             text-decoration: none;
             font-weight: bold;
             padding: 8px 16px;
@@ -69,7 +69,7 @@
             font-size: 16px;
         }
         input[type="submit"] {
-            background: #4CAF50;
+            background: #0D4828;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -81,7 +81,7 @@
             background: #45a049;
         }
         .news-item, .result-item {
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #0D4828;
             padding: 15px 0;
         }
         .news-item:last-child, .result-item:last-child {
@@ -89,7 +89,7 @@
         }
         .news-item h3, .result-item h3 {
             margin: 0 0 10px;
-            color: #4CAF50;
+            color: #0D4828;
         }
         .news-item p, .result-item p {
             margin: 0;
@@ -110,10 +110,8 @@
         <h1>Esportes Informativos</h1>
         <nav>
             <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#submit-news">Enviar Notícia</a></li>
-                <li><a href="#news">Notícias</a></li>
-                <li><a href="#results">Resultados</a></li>
+                <li><a href="#submit-news">Principais notícias</a></li>
+            
             </ul>
         </nav>
     </header>
@@ -121,31 +119,21 @@
     <div class="container">
         <section id="home">
             <h2>Bem-vindo ao Esportes Informativos!</h2>
-            <p>Fique por dentro das últimas notícias e resultados dos principais esportes.</p>
+            <p>Fique por dentro das últimas notícias e resultados dos principais jogos.</p>
         </section>
         
-        <section id="submit-news" class="news-form">
-            <h2>Envie Sua Notícia</h2>
-            <form action="#" method="post">
-                <label for="news-title">Título da Notícia:</label>
-                <input type="text" id="news-title" name="news-title" required><br>
-                <label for="news-content">Conteúdo:</label><br>
-                <textarea id="news-content" name="news-content" rows="6" required></textarea><br>
-                <input type="submit" value="Enviar Notícia">
-            </form>
-        </section>
         
         <section id="news" class="news-list">
             <h2>Notícias Recentes</h2>
             <div class="news-item">
-                <h3>Notícia 1</h3>
+                <a href="#https://ge.globo.com/futebol/times/corinthians/noticia/2024/08/27/corinthians-anuncia-a-contratacao-do-centroavante-hector-hernandez.ghtml">Corinthians anuncia a contratação de Héctor Hernández</a>
                 <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="news-item">
-                <h3>Notícia 2</h3>
+                <h3>Escrever algo aqui</h3>
                 <p>Descrição da notícia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <!-- Mais notícias podem ser adicionadas aqui -->
+            
         </section>
         
         <section id="results" class="results">
@@ -158,12 +146,94 @@
                 <h3>Resultado 2</h3>
                 <p>Detalhes do resultado... Time C vs Time D - Resultado final: Time C 3 x 0 Time D</p>
             </div>
-            <!-- Mais resultados podem ser adicionados aqui -->
+            
         </section>
     </div>
     
     <footer>
         &copy; 2024 Esportes Informativos
     </footer>
+
+      
+    <form>
+        <form id="meuFormulario" action="processar.php" method="post">
+            <div class="centralizar">
+                <h1>Deseja receber nossas notícias em primeira mão?</h1>
+                <p>Faça seu cadastro!</p>
+            </div>
+    
+            <label for="nome">*Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+            
+            <label for="email">*Email:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            
+            <label for="mensagem">*Telefone:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite seu telefone com DDD" required></textarea>
+            
+            <input type="submit" value="Enviar">
+            <p id="feedback" class="error"></p>
+        </form>
+    
+        <script>
+            document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+                var nome = document.getElementById('nome').value.trim();
+                var email = document.getElementById('email').value.trim();
+                var telefone = document.getElementById('mensagem').value.trim();
+                var feedback = document.getElementById('feedback');
+    
+                if (!nome || !email || !telefone) {
+                    feedback.textContent = "Todos os campos são obrigatórios.";
+                   
+                } else {
+                    feedback.textContent = "";
+                }
+            });
+        </script>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        form {
+            width: 50%; 
+            max-width: 600px; 
+            margin: 0 auto;
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+        }
+        
+        input, textarea {
+            display: block;
+            width: 100%; 
+            margin-bottom: 10px; 
+            padding: 10px; 
+            border: 1px solid #ccc;
+            border-radius: 4px; 
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+            var nome = document.getElementById('nome').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var telefone = document.getElementById('mensagem').value.trim();
+            var feedback = document.getElementById('feedback');
+
+            if (!nome || !email || !telefone) {
+                feedback.textContent = "Todos os campos são obrigatórios.";
+                event.preventDefault(); 
+            } else {
+                feedback.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
+
 </body>
 </html>
