@@ -7,16 +7,15 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url(https://th.bing.com/th/id/R.f876e54e8908c77a2681122b4a34d88c?rik=xpE3wGyMDGv%2bpw&pid=ImgRaw&r=0);
-            background-size: cover;
+            background-color: #f9f9f9; /* Cor de fundo padrão */
             color: #fff;
             margin: 0;
             padding: 0;
             position: relative;
         }
         header {
-            background-color: #ffffff; /* Fundo branco */
-            color: #fff;
+            background-color: rgba(255, 255, 255, 1);
+            color: #006400; /* Verde escuro para o texto do cabeçalho */
             padding: 20px;
             text-align: center;
         }
@@ -42,6 +41,13 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #006400; /* Contorno verde escuro */
+            border-radius: 4px;
+            background-color: #333;
+        }
+        nav ul li a:hover {
+            background-color: #555;
         }
         .container {
             padding: 20px;
@@ -87,6 +93,7 @@
             color: #fff;
             cursor: pointer;
             border: none;
+            border: 2px solid #006400; /* Contorno verde escuro */
         }
         form input[type="submit"]:hover {
             background-color: #555;
@@ -111,73 +118,19 @@
 </head>
 <body>
     <header>
-        <h1>Informa Esportes</h1>
-        <h2>Notícias da Semana</h2>
+        <h1>Esportes Informativos</h1>
+        <h2>As últimas notícias sobre esportes</h2>
         <nav>
             <ul>
-                <li><a href="#news">Principais notícias</a></li>
+                <li><a href="#">Principais notícias</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
-    
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Soccer_ball.svg" alt="Bola de futebol" class="ball-image"> <!-- Imagem da bola -->
-    
+
     <div class="container">
-        <section id="home">
-            <h2>Bem-vindo ao Esportes Informativos!</h2>
-            <p>Fique por dentro das últimas notícias.</p>
-        </section>
-        
-        <section id="news" class="news-list">
-            <h2>Notícias Recentes</h2>
-            <div class="news-item">
-                <h3>Vini Jr. e o racismo no futebol</h3>
-                <p>À CNN, Vini Jr. revela que o Real Madrid cogita deixar o campo em caso de racismo. Astro brasileiro defende que, se a Espanha não evoluir sobre o tema, o país deva deixar de ser sede da Copa do Mundo de 2030.</p>
-            </div>
-            <div class="news-item">
-                <h3>Desafio testado na Copa do Mundo Feminina Sub-20</h3>
-                <p>Alternativa econômica ao VAR, “desafio” é testado na Copa do Mundo Feminina Sub-20. Na vitória do Brasil contra a França, as duas equipes utilizaram o desafio.</p>
-            </div>
-            <div class="news-item">
-                <h3>Memphis Depay e o Corinthians</h3>
-                <p>Ex-Barcelona e titular na Euro: quem é Memphis Depay, alvo do Corinthians. Atacante de 30 anos está sem contrato desde a sua saída do Atlético de Madrid.</p>
-            </div>
-            <div class="news-item">
-                <h3>Jovem jogador assina contrato com o Corinthians</h3>
-                <p>Jovem que estava na Roma assina contrato com o Corinthians; veja detalhes. Pedro Lopes chega inicialmente para a categoria Sub-20 do Corinthians.</p>
-            </div>
-        </section>
-        
-<form id="meuFormulario" action="https://formspree.io/f/xrbzdkkz" method="post">
-    <h1>Deseja receber nossas notícias em primeira mão?</h1>
-    <p>Faça seu cadastro!</p>
-    <label for="nome">*Nome:</label>
-    <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
-    <label for="email">*Email:</label>
-    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-    <label for="mensagem">*Telefone:</label>
-    <textarea id="mensagem" name="mensagem" placeholder="Digite seu telefone com DDD" required></textarea>
-
-    <input type="hidden" name="_next" value="https://<Mrocha2002>.github.io/<Esportes_Informativos>/success.html">
-    <input type="submit" value="Enviar">
-    <p id="feedback" class="error"></p>
-</form>
-
-        <script>
-            document.getElementById('meuFormulario').addEventListener('submit', function(event) {
-                var nome = document.getElementById('nome').value.trim();
-                var email = document.getElementById('email').value.trim();
-                var telefone = document.getElementById('mensagem').value.trim();
-                var feedback = document.getElementById('feedback');
-
-                if (!nome || !email || !telefone) {
-                    feedback.textContent = "Todos os campos são obrigatórios.";
-                    event.preventDefault(); 
-                } else {
-                    feedback.textContent = "";
-                }
-            });
-        </script>
+        <!-- Conteúdo da página aqui -->
     </div>
     
     <footer>
