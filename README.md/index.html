@@ -1,128 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informa Esportes</title>
+    <title>Esportes Informativos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #006400; /* Fundo verde camuflado */
-            color: #ffffff;
+            background-image: url(https://th.bing.com/th/id/R.f876e54e8908c77a2681122b4a34d88c?rik=xpE3wGyMDGv%2bpw&pid=ImgRaw&r=0);
+            background-size: cover;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            background-color: #004d00;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
-        header img {
-            width: 50px;
-            position: absolute;
-            top: 20px;
-        }
-        .ball-left {
-            left: 10px;
-        }
-        .ball-right {
-            right: 10px;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        .news-section {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .news-section h2 {
-            margin-top: 0;
-            color: #004d00;
-        }
-        .news-item {
-            border-bottom: 1px solid #004d00;
-            padding: 15px 0;
-        }
-        .news-item:last-child {
-            border-bottom: none;
-        }
-        .news-item h3 {
-            margin: 0 0 10px;
-        }
-        footer {
-            background-color: #004d00;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-        footer form {
-            margin-top: 20px;
-        }
-        input[type="email"] {
+            background-color: #333;
+            color: #fff;
             padding: 10px;
-            width: 80%;
-            max-width: 300px;
-            border-radius: 4px;
-            border: none;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
             margin-right: 10px;
         }
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #ffffff;
-            color: #004d00;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
-        input[type="submit"]:hover {
-            background-color: #e0e0e0;
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .news-list .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .error {
+            color: red;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/50" alt="Bola de Futebol" class="ball-left">
-        <h1>Informa Esportes</h1>
-        <img src="https://via.placeholder.com/50" alt="Bola de Futebol" class="ball-right">
+        <h1>Esportes Informativos</h1>
+        <nav>
+            <ul>
+                <li><a href="#submit-news">Principais notícias</a></li>
+            </ul>
+        </nav>
     </header>
-
+    
     <div class="container">
-        <section class="news-section">
-            <h2>Notícias de Esportes</h2>
-            <div class="news-item">
-                <h3>Corinthians anuncia a contratação de Héctor Hernández</h3>
-                <p>O Corinthians reforçou seu elenco com a contratação do centroavante Héctor Hernández, que chega para disputar a temporada 2024.</p>
-            </div>
-            <div class="news-item">
-                <h3>Palmeiras vence o clássico contra o São Paulo</h3>
-                <p>Em um jogo eletrizante, o Palmeiras venceu o São Paulo por 3 a 2, com um gol decisivo nos minutos finais da partida.</p>
-            </div>
-            <!-- Adicione mais notícias conforme necessário -->
+        <section id="home">
+            <h2>Bem-vindo ao Esportes Informativos!</h2>
+            <p>Fique por dentro das últimas notícias.</p>
         </section>
-    </div>
-
-    <footer>
-        <p>Cadastre seu email para receber as últimas notícias diretamente:</p>
-        <form action="seu_script.php" method="post">
-            <input type="email" name="email" placeholder="Seu email" required>
-            <input type="submit" value="Inscrever-se">
+        
+        <section id="news" class="news-list">
+            <h2>Notícias Recentes</h2>
+            <div class="news-item">
+                <p>À CNN, Vini Jr. revela que Real Madrid cogita deixar campo em caso de racismo. Astro brasileiro defende que, se a Espanha não evoluir sobre o tema, o país deva deixar de ser sede da Copa do Mundo de 2030.</p>
+            </div>
+            <div class="news-item">
+                <p>Alternativa econômica ao VAR, “desafio” é testado na Copa do Mundo Feminina Sub-20. Na vitória do Brasil contra a França, as duas equipes utilizaram o desafio.</p>
+            </div>
+            <div class="news-item">
+                <p>Ex-Barcelona e titular na Euro: quem é Memphis Depay, alvo do Corinthians. Atacante de 30 anos está sem contrato desde a sua saída do Atlético de Madrid.</p>
+            </div>
+            <div class="news-item">
+                <p>Jovem que estava na Roma assina contrato com o Corinthians; veja detalhes. Pedro Lopes chega inicialmente para a categoria Sub-20 do Corinthians.</p>
+            </div>
+        </section>
+        
+        <form id="meuFormulario" action="processar.php" method="post">
+            <h1>Deseja receber nossas notícias em primeira mão?</h1>
+            <p>Faça seu cadastro!</p>
+            <label for="nome">*Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+            <label for="email">*Email:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            <label for="mensagem">*Telefone:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite seu telefone com DDD" required></textarea>
+            <input type="submit" value="Enviar">
+            <p id="feedback" class="error"></p>
         </form>
-        <p>&copy; 2024 Informa Esportes. Todos os direitos reservados.</p>
+
+        <script>
+            document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+                var nome = document.getElementById('nome').value.trim();
+                var email = document.getElementById('email').value.trim();
+                var telefone = document.getElementById('mensagem').value.trim();
+                var feedback = document.getElementById('feedback');
+
+                if (!nome || !email || !telefone) {
+                    feedback.textContent = "Todos os campos são obrigatórios.";
+                    event.preventDefault(); 
+                } else {
+                    feedback.textContent = "";
+                }
+            });
+        </script>
+    </div>
+    
+    <footer>
+        &copy; 2024 Esportes Informativos
     </footer>
 </body>
 </html>
