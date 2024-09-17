@@ -7,7 +7,11 @@ os usuários fiquem atualizados sobre tudo o que acontece no mundo esportivo.
 Este projeto conta com a colaboração de:
 
 Matheus Rocha de Araujo - 202402409778
+
 Matheus Giacomello Gonçalves de Lima-202402719181
+
 Vinicius - RA
+
 Izadora     -   RA
+
 Lizandro Ariel Rojas Maldonado - 202402410644
