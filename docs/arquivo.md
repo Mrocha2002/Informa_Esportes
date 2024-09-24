@@ -4,6 +4,7 @@ as últimas notícias e informações sobre diversos esportes, permitindo que
 sejam adicionadas noticias sobre o mundo de esporte por jonalistas e paginas de noticias
 
 **Colaboradores**
+
 Matheus Rocha de Araujo-202402409778
 
 Matheus Giacomello Gonçalves de Lima-202402719181
